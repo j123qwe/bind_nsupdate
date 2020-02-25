@@ -11,7 +11,7 @@ DATA=$5
 #$$ Functions
 check_fqdn(){
 ## Check for valid FQDN
-REGEX='^[a-z0-9.-]{1,255}\.[a-z][a-z0-9-]{1,62}[a-z]\.[a-z]{2,10}$'
+REGEX='^[a-zA-Z0-9.-]{1,255}\.[a-zA-Z][a-zA-Z0-9-]{1,62}[a-zA-Z]\.[a-zA-Z]{2,10}$'
 if [[ ! ${DOMAIN} =~ ${REGEX} ]]; then
     echo "Invalid domain format."
     exit
